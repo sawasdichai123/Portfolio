@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sundae Project | Sawasdichai Amornpradubkool</title>
+    <meta name="description" content="Detailed view of the Sundae web application project.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-header {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--text-bright);
+        }
+
+        .gallery-card {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">S.A.</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#project">Project</a></li>
+                <li><a href="index.html#gallery">Certificates</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dynamic Background -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <main>
+        <section class="section project-header">
+            <div class="container">
+                <a href="index.html#project" class="back-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5"></path>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Back to Portfolio
+                </a>
+                <h1 class="section-title reveal" style="margin-bottom: 1rem;">The <span class="highlight">Sundae</span>
+                    Project</h1>
+                <p class="subtitle" style="color: var(--secondary); max-width: 800px; margin: 0 auto 3rem;">
+                    A modern platform for customer chat and knowledge base integrations, enabling seamless human
+                    handoff.
+                </p>
+            </div>
+        </section>
+
+        <section class="section pt-0">
+            <div class="container gallery-container">
+                <h2 class="section-title reveal" style="margin-bottom: 2rem;">Project <span
+                        class="highlight">Screenshots</span></h2>
+                <div class="grid">
+
+                    <div class="card gallery-card reveal delay-1"
+                        onclick="openLightbox('assets/projects/sundae/Dashboard.jpg', 'Dashboard')">
+                        <div class="card-image-wrapper">
+                            <img loading="lazy" src="assets/projects/sundae/Dashboard.jpg" alt="Dashboard">
+                        </div>
+                        <div class="card-content">
+                            <h3>Dashboard</h3>
+                        </div>
+                    </div>
+
+                    <div class="card gallery-card reveal delay-2"
+                        onclick="openLightbox('assets/projects/sundae/Inbox.jpg', 'Inbox')">
+                        <div class="card-image-wrapper">
+                            <img loading="lazy" src="assets/projects/sundae/Inbox.jpg" alt="Inbox">
+                        </div>
+                        <div class="card-content">
+                            <h3>Inbox</h3>
+                        </div>
+                    </div>
+
+                    <div class="card gallery-card reveal delay-3"
+                        onclick="openLightbox('assets/projects/sundae/Web Chat.jpg', 'Web Chat')">
+                        <div class="card-image-wrapper">
+                            <img loading="lazy" src="assets/projects/sundae/Web Chat.jpg" alt="Web Chat">
+                        </div>
+                        <div class="card-content">
+                            <h3>Web Chat</h3>
+                        </div>
+                    </div>
+
+                    <div class="card gallery-card reveal delay-1"
+                        onclick="openLightbox('assets/projects/sundae/Bots.jpg', 'Bots')">
+                        <div class="card-image-wrapper">
+                            <img loading="lazy" src="assets/projects/sundae/Bots.jpg" alt="Bots">
+                        </div>
+                        <div class="card-content">
+                            <h3>Bots Configuration</h3>
+                        </div>
+                    </div>
+
+                    <div class="card gallery-card reveal delay-2"
+                        onclick="openLightbox('assets/projects/sundae/Knowledge Base.jpg', 'Knowledge Base')">
+                        <div class="card-image-wrapper">
+                            <img loading="lazy" src="assets/projects/sundae/Knowledge Base.jpg" alt="Knowledge Base">
+                        </div>
+                        <div class="card-content">
+                            <h3>Knowledge Base</h3>
+                        </div>
+                    </div>
+
+                    <div class="card gallery-card reveal delay-3"
+                        onclick="openLightbox('assets/projects/sundae/Integration.jpg', 'Integration')">
+                        <div class="card-image-wrapper">
+                            <img loading="lazy" src="assets/projects/sundae/Integration.jpg" alt="Integration">
+                        </div>
+                        <div class="card-content">
+                            <h3>Integrations</h3>
+                        </div>
+                    </div>
+
+                    <div class="card gallery-card reveal delay-1"
+                        onclick="openLightbox('assets/projects/sundae/Approvals.jpg', 'Approvals')">
+                        <div class="card-image-wrapper">
+                            <img loading="lazy" src="assets/projects/sundae/Approvals.jpg" alt="Approvals">
+                        </div>
+                        <div class="card-content">
+                            <h3>Approvals</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Sawasdichai Amornpradubkool. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content-wrapper">
+            <img class="lightbox-img" id="lightbox-img" src="" alt="Full Screen Screenshot">
+            <h3 id="lightbox-caption"></h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
