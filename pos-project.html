@@ -34,6 +34,53 @@
         .gallery-card {
             cursor: pointer;
         }
+
+        /* Mobile app portrait screenshot grid */
+        .mobile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .mobile-grid .card-image-wrapper {
+            height: 420px;
+            background: #1a1a2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px 12px 0 0;
+            padding: 0.5rem;
+        }
+
+        .mobile-grid .card-image-wrapper img {
+            width: auto;
+            height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            .mobile-grid .card-image-wrapper {
+                height: 320px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .mobile-grid {
+                grid-template-columns: 1fr;
+                max-width: 300px;
+            }
+            .mobile-grid .card-image-wrapper {
+                height: 500px;
+            }
+        }
     </style>
 </head>
 
@@ -94,7 +141,7 @@
             <div class="container gallery-container">
                 <h2 class="section-title reveal" style="margin-bottom: 2rem;">Project <span
                         class="highlight">Screenshots</span></h2>
-                <div class="grid">
+                <div class="mobile-grid">
 
                     <div class="card gallery-card reveal delay-1"
                         onclick="openLightbox('assets/projects/pos/Dashboard.jpg', 'Dashboard')">
