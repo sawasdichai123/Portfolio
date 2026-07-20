@@ -73,8 +73,8 @@
                 <h1 class="section-title reveal" style="margin-bottom: 1rem;">The <span class="highlight">Sundae</span>
                     Project</h1>
                 <p class="subtitle" style="color: var(--secondary); max-width: 800px; margin: 0 auto 3rem;">
-                    A modern platform for customer chat and knowledge base integrations, enabling seamless human
-                    handoff.
+                    An AI RAG platform that answers customer questions from an organization's knowledge base across
+                    LINE and web chat, handing off to a human agent when needed.
                 </p>
                 <div style="margin-bottom: 3rem;">
                     <a href="https://github.com/sawasdichai123/Sundae-Al-Rag-Qwen3" target="_blank" class="github-link"
@@ -86,6 +86,42 @@
                         View Repository
                     </a>
                 </div>
+            </div>
+        </section>
+
+        <section class="section pt-0">
+            <div class="container" style="max-width: 900px;">
+                <h2 class="section-title reveal" style="margin-bottom: 1.5rem;">Overview</h2>
+                <p class="reveal"
+                    style="color: var(--secondary); font-size: 1.05rem; line-height: 1.75; margin-bottom: 3rem;">
+                    Sundae is a customer-support platform where an AI RAG chatbot answers questions from an
+                    organization's uploaded knowledge base and talks to customers over LINE and a website chat widget,
+                    handing the conversation to a human agent when needed. It is multi-tenant, so each organization
+                    manages its own bots, team, and knowledge base. Built as a team project with React, FastAPI, and
+                    Supabase.
+                </p>
+
+                <h2 class="section-title reveal" style="margin-bottom: 1.5rem;">My <span
+                        class="highlight">Contributions</span></h2>
+                <ul class="feature-list reveal" style="font-size: 1rem; line-height: 1.7;">
+                    <li><strong>Multi-tenant organization system</strong> — organization management, multi-admin and
+                        role-based access control, transfer ownership, member and bot counts, email invitations, and
+                        org logo upload.</li>
+                    <li><strong>Authentication &amp; security</strong> — JWT auth, Row-Level Security policies, AES-GCM
+                        encryption for LINE secrets, the password-reset flow, and input validation.</li>
+                    <li><strong>Admin inbox &amp; human handoff</strong> — a realtime inbox with status tracking and
+                        filters, cancel-handoff, and message source references.</li>
+                    <li><strong>Omnichannel integration</strong> — LINE webhook postbacks, an embeddable web chat
+                        widget, and the integration embed-code page.</li>
+                    <li><strong>Knowledge base</strong> — document upload (PDF/DOCX), storage display, and the PDF
+                        viewer.</li>
+                    <li><strong>Internationalization</strong> — a full Thai/English language toggle across every page.
+                    </li>
+                </ul>
+                <p class="reveal" style="color: var(--secondary); font-size: 0.9rem; margin-top: 1.5rem;">
+                    The core RAG engine (Thai text splitting, vector search, embedding + reranker, and LLM generation)
+                    and the initial project scaffolding were built by a teammate.
+                </p>
             </div>
         </section>
 
