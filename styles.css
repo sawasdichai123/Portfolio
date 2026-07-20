@@ -447,6 +447,165 @@ h3 {
     color: var(--primary);
 }
 
+.skills-note {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 0.9rem;
+    margin-top: -3rem;
+    margin-bottom: 3rem;
+}
+
+.skills-note a {
+    color: var(--primary);
+}
+
+/* Proficiency Meters */
+.proficiency-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.proficiency-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.proficiency-header span:first-child {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.proficiency-label {
+    color: var(--secondary);
+    font-size: 0.8rem;
+}
+
+.proficiency-bar {
+    height: 8px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.proficiency-fill {
+    display: block;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgba(88, 166, 255, 0.6), var(--primary));
+}
+
+/* Activities Section */
+.activity-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-bright);
+    margin: 3rem 0 1.5rem;
+}
+
+.activity-subtitle:first-of-type {
+    margin-top: 0;
+}
+
+.activity-grid {
+    margin-bottom: 1rem;
+}
+
+.activity-date {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.activity-program-note {
+    color: var(--secondary);
+    font-size: 0.9rem;
+    margin: -1rem 0 1.5rem;
+}
+
+.placeholder-card {
+    border-style: dashed;
+    border-color: var(--card-border);
+    cursor: default;
+    justify-content: center;
+    min-height: 160px;
+}
+
+.placeholder-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--secondary);
+}
+
+.placeholder-card .card-content {
+    justify-content: center;
+    text-align: center;
+}
+
+.placeholder-card h3 {
+    color: var(--secondary);
+}
+
+/* Contact Section */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.contact-card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.contact-card svg {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.contact-card h3 {
+    font-size: 1.1rem;
+}
+
+.contact-card p {
+    color: var(--secondary);
+    font-size: 0.9rem;
+    word-break: break-word;
+}
+
+.social-note {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 0.85rem;
+    margin-top: 2rem;
+}
+
+.footer-social {
+    margin-top: 0.5rem;
+}
+
+.footer-social a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.footer-social a:hover {
+    color: var(--primary);
+}
+
 /* Projects Section */
 .project-container {
     max-width: 900px;

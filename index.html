@@ -90,7 +90,10 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#project">Project</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#gallery">Certificates</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -168,54 +171,110 @@
         <section id="skills" class="section">
             <div class="container">
                 <h2 class="section-title reveal">Technical <span class="highlight">Skills</span></h2>
+                <p class="skills-note reveal">Proficiency levels are self-assessed from hands-on project work across
+                    <a href="https://github.com/sawasdichai123" target="_blank" rel="noopener">my GitHub
+                        repositories</a>.</p>
                 <div class="skills-grid">
+                    <!-- ภาษาด้านคอมพิวเตอร์ -->
                     <div class="skill-category card reveal delay-1">
-                        <h3>Cloud Computing (AWS)</h3>
+                        <h3>Programming Languages</h3>
+                        <div class="proficiency-list">
+                            <div class="proficiency-meter">
+                                <div class="proficiency-header"><span>TypeScript</span><span
+                                        class="proficiency-label">Advanced</span></div>
+                                <div class="proficiency-bar"><span class="proficiency-fill" style="width:90%"></span>
+                                </div>
+                            </div>
+                            <div class="proficiency-meter">
+                                <div class="proficiency-header"><span>Python</span><span
+                                        class="proficiency-label">Advanced</span></div>
+                                <div class="proficiency-bar"><span class="proficiency-fill" style="width:85%"></span>
+                                </div>
+                            </div>
+                            <div class="proficiency-meter">
+                                <div class="proficiency-header"><span>JavaScript</span><span
+                                        class="proficiency-label">Advanced</span></div>
+                                <div class="proficiency-bar"><span class="proficiency-fill" style="width:85%"></span>
+                                </div>
+                            </div>
+                            <div class="proficiency-meter">
+                                <div class="proficiency-header"><span>C#</span><span
+                                        class="proficiency-label">Intermediate</span></div>
+                                <div class="proficiency-bar"><span class="proficiency-fill" style="width:65%"></span>
+                                </div>
+                            </div>
+                            <div class="proficiency-meter">
+                                <div class="proficiency-header"><span>SQL / PL-pgSQL</span><span
+                                        class="proficiency-label">Intermediate</span></div>
+                                <div class="proficiency-bar"><span class="proficiency-fill" style="width:60%"></span>
+                                </div>
+                            </div>
+                            <div class="proficiency-meter">
+                                <div class="proficiency-header"><span>HTML / CSS</span><span
+                                        class="proficiency-label">Advanced</span></div>
+                                <div class="proficiency-bar"><span class="proficiency-fill" style="width:90%"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- เฟรมเวิร์คและไลบรารี ฐานข้อมูล -->
+                    <div class="skill-category card reveal delay-2">
+                        <h3>Frameworks, Libraries & Databases</h3>
                         <div class="skill-list">
-                            <span class="skill-tag">Lambda</span>
-                            <span class="skill-tag">EC2</span>
-                            <span class="skill-tag">API Gateway</span>
-                            <span class="skill-tag">VPC</span>
-                            <span class="skill-tag">S3</span>
-                            <span class="skill-tag">DynamoDB</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">.NET 8 (MAUI)</span>
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                            <span class="skill-tag">LlamaIndex (RAG)</span>
+                            <span class="skill-tag">Supabase</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">SQLite</span>
+                            <span class="skill-tag">Redis</span>
+                        </div>
+                    </div>
+
+                    <!-- เครื่องมือและเทคโนโลยีที่ใช้ -->
+                    <div class="skill-category card reveal delay-3">
+                        <h3>Tools & Technologies</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Git / GitHub</span>
+                            <span class="skill-tag">Docker & Docker Compose</span>
+                            <span class="skill-tag">Ollama (local LLM serving)</span>
+                            <span class="skill-tag">Google Gemini API</span>
+                            <span class="skill-tag">Nginx / Caddy</span>
+                            <span class="skill-tag">AWS Lambda</span>
+                            <span class="skill-tag">AWS EC2</span>
+                            <span class="skill-tag">AWS API Gateway</span>
+                            <span class="skill-tag">AWS S3 / DynamoDB</span>
                             <span class="skill-tag">AWS Amplify</span>
-                            <span class="skill-tag">AWS Cloud9</span>
+                        </div>
+                        <ul class="feature-list" style="margin-top: 1.5rem;">
+                            <li>AI Architecture: RAG (Retrieval-Augmented Generation) pipelines for bilingual chatbot
+                                systems (Sundae AI, Qwen3 + Thai NLP).</li>
+                            <li>AI-Assisted Development: using LLMs (Gemini, ChatGPT) for code generation, debugging,
+                                and refactoring.</li>
+                        </ul>
+                    </div>
+
+                    <!-- ชื่อโปรแกรมที่ใช้ -->
+                    <div class="skill-category card reveal delay-1">
+                        <h3>Software Used</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Vercel</span>
+                            <span class="skill-tag">Docker Desktop</span>
+                            <span class="skill-tag">GitHub Desktop</span>
                         </div>
                     </div>
 
                     <div class="skill-category card reveal delay-2">
-                        <h3>Software Development</h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">C#</span>
-                            <span class="skill-tag">.NET 8 (MAUI)</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">HTML/CSS</span>
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">Docker</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category card reveal delay-3">
-                        <h3>Artificial Intelligence & Automation</h3>
-                        <ul class="feature-list">
-                            <li>AI Architecture: Knowledgeable in RAG (Retrieval-Augmented Generation) for chatbot
-                                systems.</li>
-                            <li>AI-Augmented Development: Proficient in AI-Assisted Coding (Vibe Coding) to accelerate
-                                development workflows. Skilled in using LLMs (Gemini, ChatGPT) for code generation,
-                                debugging, and refactoring in .NET MAUI 8 projects.</li>
-                            <li>Process Automation: Familiar with RPA (Robotic Process Automation) and Low-Code/No-Code
-                                platforms.</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-category card reveal delay-1">
-                        <h3>Languages</h3>
+                        <h3>Spoken Languages</h3>
                         <div class="skill-list">
                             <span class="skill-tag">English (CEFR B1)</span>
                             <span class="skill-tag">Thai (Native)</span>
-
                         </div>
                     </div>
                 </div>
@@ -275,6 +334,162 @@
                             <a href="crypto-project.html"
                                 style="color: var(--primary); margin-top: 1rem; display: inline-block; text-decoration: none; font-weight: 500;">View
                                 Project &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activities and Contributions Section -->
+        <section id="activities" class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title reveal">Activities & <span class="highlight">Contributions</span></h2>
+
+                <h3 class="activity-subtitle reveal">Programming Competitions & Hackathons</h3>
+                <div class="grid activity-grid">
+                    <div class="card placeholder-card reveal delay-1">
+                        <div class="card-content">
+                            <h3>No entries yet</h3>
+                            <p>Add your programming competition or hackathon here: name, date, and the result/award
+                                you received.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="activity-subtitle reveal">Technology Clubs & Activities</h3>
+                <p class="activity-program-note reveal">KAIT International Short-Term Exchange & Research Program
+                    &middot; Kanagawa Institute of Technology (KAIT), Japan &middot; Role: Short-Term Exchange /
+                    Research Student</p>
+                <div class="grid activity-grid">
+                    <div class="card reveal delay-1"
+                        onclick="openLightbox('assets/activities/kait/Ueno-Lecture-1.jpg', 'KAIT — Mr. Ueno\'s Lecture, Realizing Your DREAMS')">
+                        <div class="card-image-wrapper">
+                            <img loading="lazy" src="assets/activities/kait/Ueno-Lecture-1.jpg"
+                                alt="Mr. Ueno's lecture at KAIT">
+                        </div>
+                        <div class="card-content">
+                            <h3>Lecture: "Realizing Your DREAMS!"</h3>
+                            <p class="activity-date">17 July 2026</p>
+                            <p>Second session of Mr. Ueno's lecture with short-term exchange and KAIT buddy students,
+                                presenting action plans and reflections toward personal goals.</p>
+                        </div>
+                    </div>
+                    <div class="card placeholder-card reveal delay-2">
+                        <div class="card-content">
+                            <h3>Courtesy Visit to KAIT President</h3>
+                            <p class="activity-date">24 June 2026</p>
+                            <p>Paid a courtesy visit to President Inoue with fellow exchange students, sharing
+                                experiences studying and living in Japan. Photo to be added.</p>
+                        </div>
+                    </div>
+                    <div class="card placeholder-card reveal delay-3">
+                        <div class="card-content">
+                            <h3>Visit to Atsugi High School</h3>
+                            <p class="activity-date">23 June 2026</p>
+                            <p>Visited Atsugi High School's Super Science High School (SSH) presentation event for an
+                                international exchange with Japanese high school students. Photo to be added.</p>
+                        </div>
+                    </div>
+                    <div class="card placeholder-card reveal delay-1">
+                        <div class="card-content">
+                            <h3>International English Classes</h3>
+                            <p class="activity-date">22 June 2026</p>
+                            <p>Joined the Scientific and Technical English class and the English for International
+                                Community Bio class at KAIT. Photo to be added.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="activity-subtitle reveal">Seminars & Conferences</h3>
+                <div class="grid activity-grid">
+                    <div class="card reveal delay-1"
+                        onclick="openLightbox('Reactor EntreCamp Asia Vurtual Edition 2020 (Reactor School on 22 December 2020.jpg', 'Reactor EntreCamp Asia 2020')">
+                        <div class="card-image-wrapper">
+                            <img loading="lazy"
+                                src="Reactor EntreCamp Asia Vurtual Edition 2020 (Reactor School on 22 December 2020.jpg"
+                                alt="Reactor EntreCamp Asia 2020">
+                        </div>
+                        <div class="card-content">
+                            <h3>Reactor EntreCamp Asia</h3>
+                            <p class="activity-date">Virtual Edition &middot; 22 December 2020</p>
+                            <p>Attended Reactor School's virtual entrepreneurship & technology camp for Asia, focused
+                                on startup building and pitching skills.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="activity-subtitle reveal">Robotics Competitions & Camps</h3>
+                <div class="grid activity-grid">
+                    <div class="card reveal delay-1"
+                        onclick="openLightbox('WORLD ROBOT OLYMPAID THAILAND 2015 (Robot Explorer).jpg', 'WRO Thailand 2015')">
+                        <div class="card-image-wrapper">
+                            <img loading="lazy" src="WORLD ROBOT OLYMPAID THAILAND 2015 (Robot Explorer).jpg"
+                                alt="WRO Thailand 2015">
+                        </div>
+                        <div class="card-content">
+                            <h3>World Robot Olympiad Thailand</h3>
+                            <p class="activity-date">2015</p>
+                            <p>Competed in the Robot Explorer category, designing and programming an autonomous robot
+                                to navigate and complete mission tasks.</p>
+                        </div>
+                    </div>
+                    <div class="card reveal delay-2"
+                        onclick="openLightbox('Zeer Robotics Open 2015 (1st runner-up age 14 and under Robokit BEAM Race 2015 intergrated Circuit).jpg', 'Zeer Robotics Open 2015')">
+                        <div class="card-image-wrapper">
+                            <img loading="lazy"
+                                src="Zeer Robotics Open 2015 (1st runner-up age 14 and under Robokit BEAM Race 2015 intergrated Circuit).jpg"
+                                alt="Zeer Robotics Open 2015">
+                        </div>
+                        <div class="card-content">
+                            <h3>Zeer Robotics Open</h3>
+                            <p class="activity-date">2015 &middot; 1st Runner-up</p>
+                            <p>Robokit BEAM Race, integrated circuit category (age 14 and under).</p>
+                        </div>
+                    </div>
+                    <div class="card reveal delay-3"
+                        onclick="openLightbox('3rd Pantip Robot Contest 2014 2rd runner-up BEAM Race.jpg', '3rd Pantip Robot Contest 2014')">
+                        <div class="card-image-wrapper">
+                            <img loading="lazy" src="3rd Pantip Robot Contest 2014 2rd runner-up BEAM Race.jpg"
+                                alt="3rd Pantip Robot Contest 2014">
+                        </div>
+                        <div class="card-content">
+                            <h3>Pantip Robot Contest</h3>
+                            <p class="activity-date">2014 &middot; 2nd Runner-up</p>
+                            <p>BEAM Race category at the 3rd Pantip Robot Contest.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Certifications</h2>
+                <div class="grid">
+                    <div class="card placeholder-card reveal delay-1">
+                        <div class="card-content">
+                            <h3>No certifications added yet</h3>
+                            <p>Add your IT certifications or key training here: certificate name, issuing
+                                organization, and the date earned.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="experience" class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title reveal">Work <span class="highlight">Experience</span></h2>
+                <div class="timeline">
+                    <div class="timeline-item reveal delay-1">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content card">
+                            <h3>No formal work experience yet</h3>
+                            <p>Currently focused on academic projects and independent development (see Featured
+                                Projects above). Open to internships and entry-level opportunities in software
+                                development and AI.</p>
                         </div>
                     </div>
                 </div>
@@ -500,10 +715,54 @@
                 </div>
             </div>
         </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Get In <span class="highlight">Touch</span></h2>
+                <div class="contact-grid">
+                    <a href="tel:0627499966" class="card contact-card reveal delay-1">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                        <h3>Phone</h3>
+                        <p>062-749-9966</p>
+                    </a>
+                    <a href="mailto:sawasdichai.amor@bumail.net" class="card contact-card reveal delay-2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <h3>Email</h3>
+                        <p>sawasdichai.amor@bumail.net</p>
+                    </a>
+                    <a href="https://github.com/sawasdichai123" target="_blank" rel="noopener"
+                        class="card contact-card reveal delay-3">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.605-2.665-.303-5.467-1.332-5.467-5.93 0-1.31.468-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+                            </path>
+                        </svg>
+                        <h3>GitHub</h3>
+                        <p>@sawasdichai123</p>
+                    </a>
+                </div>
+                <p class="social-note reveal">More social links (LinkedIn, X/Twitter, etc.) can be added here once
+                    confirmed for public sharing.</p>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
         <p>&copy; 2026 Sawasdichai Amornpradubkool. All Rights Reserved.</p>
+        <div class="footer-social">
+            <a href="https://github.com/sawasdichai123" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+        </div>
     </footer>
 
     <!-- Lightbox Modal -->
