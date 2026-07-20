@@ -313,6 +313,33 @@ h3 {
     color: var(--secondary);
 }
 
+.about-letter {
+    max-width: 820px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+
+.about-letter p {
+    font-size: 1.02rem;
+    line-height: 1.75;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.about-letter p:last-child {
+    margin-bottom: 0;
+}
+
+.about-letter strong {
+    color: var(--text-bright);
+    font-weight: 600;
+}
+
+.about-letter em {
+    color: var(--text-main);
+    font-style: italic;
+}
+
 /* Education Timeline */
 .timeline {
     position: relative;
