@@ -881,4 +881,30 @@ h3 {
     .project-container {
         padding: 2rem 1.5rem;
     }
+
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    /* Single-column grids on mobile so nested cards/images never overflow */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Tighten the timeline rail so content has room on narrow screens */
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-item {
+        padding-left: 38px;
+    }
+
+    .timeline-dot {
+        left: 1px;
+    }
+
+    .program-hero {
+        max-height: none;
+    }
 }
