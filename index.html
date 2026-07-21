@@ -76,6 +76,78 @@
                 gap: 0.5rem;
             }
         }
+
+        /* CLI project cover (terminal mock) */
+        .cover-mockup.cli-cover {
+            background: linear-gradient(135deg, #0d1a14 0%, #0a0f0d 100%);
+        }
+
+        .cli-cover .terminal {
+            width: 100%;
+            max-width: 340px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            background: #0b0f0e;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .cli-cover .terminal {
+            transform: scale(1.04);
+        }
+
+        .cli-cover .terminal-bar {
+            display: flex;
+            gap: 6px;
+            padding: 8px 10px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .cli-cover .terminal-bar span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #3a3f3d;
+        }
+
+        .cli-cover .terminal-bar span:first-child {
+            background: #ff5f56;
+        }
+
+        .cli-cover .terminal-bar span:nth-child(2) {
+            background: #ffbd2e;
+        }
+
+        .cli-cover .terminal-bar span:nth-child(3) {
+            background: #27c93f;
+        }
+
+        .cli-cover .terminal-body {
+            padding: 0.9rem 1rem;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+            font-size: 0.78rem;
+            line-height: 1.9;
+            color: #c9d1d9;
+            text-align: left;
+        }
+
+        .cli-cover .t-prompt {
+            color: #27c93f;
+        }
+
+        .cli-cover .t-ok {
+            color: #7ee787;
+        }
+
+        .cli-cover .t-ai {
+            color: #58a6ff;
+        }
+
+        .cli-cover .t-low {
+            color: #27c93f;
+            font-weight: 700;
+        }
     </style>
 </head>
 
@@ -313,6 +385,32 @@
                             <a href="crypto-project.html"
                                 style="color: var(--primary); margin-top: 1rem; display: inline-block; text-decoration: none; font-weight: 500;">View
                                 Project &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="card reveal delay-1"
+                        onclick="window.open('https://github.com/sawasdichai123/luxion-cli', '_blank')">
+                        <div class="cover-mockup cli-cover">
+                            <div class="terminal">
+                                <div class="terminal-bar"><span></span><span></span><span></span></div>
+                                <div class="terminal-body">
+                                    <p><span class="t-prompt">$</span> luxion monitor</p>
+                                    <p class="t-ok">✔ CPU 34% · RAM 61% · TEMP 52°C</p>
+                                    <p class="t-ok">✔ SMART OK · 3 startup items scanned</p>
+                                    <p><span class="t-ai">🧠 AI Risk:</span> <span class="t-low">LOW</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Luxion CLI</h3>
+                            <p class="tech-stack"
+                                style="color: var(--primary); font-size: 0.9rem; margin-bottom: 0.5rem;">Node.js,
+                                TypeScript, Google Gemini API</p>
+                            <p>A cross-platform command-line tool that checks hardware health, monitors processes for
+                                security risks (SHA-256 + VirusTotal), and uses AI to rate system risk — with a
+                                rule-based offline fallback. Published on npm.</p>
+                            <a href="https://github.com/sawasdichai123/luxion-cli" target="_blank" rel="noopener"
+                                style="color: var(--primary); margin-top: 1rem; display: inline-block; text-decoration: none; font-weight: 500;">View
+                                on GitHub &rarr;</a>
                         </div>
                     </div>
                 </div>
