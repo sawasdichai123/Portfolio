@@ -340,6 +340,57 @@ h3 {
     font-style: italic;
 }
 
+/* Research highlight box (Work Experience) */
+.research-highlight {
+    border-left: 3px solid var(--primary);
+    background: rgba(88, 166, 255, 0.06);
+    border-radius: 0 12px 12px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.research-highlight h4 {
+    color: var(--text-bright);
+    font-size: 1.1rem;
+    margin-bottom: 0.35rem;
+}
+
+.research-highlight .research-meta {
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.research-highlight p {
+    color: var(--secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.research-highlight strong {
+    color: var(--text-bright);
+    font-weight: 600;
+}
+
+.research-link {
+    color: var(--primary);
+    margin-top: 0.75rem;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.research-link:hover {
+    color: var(--text-bright);
+}
+
+.exchange-label {
+    color: var(--text-main);
+    font-weight: 500;
+    margin: 1.75rem 0 0.5rem;
+}
+
 /* Education Timeline */
 .timeline {
     position: relative;

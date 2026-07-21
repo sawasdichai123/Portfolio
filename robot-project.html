@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Arm Research | Sawasdichai Amornpradubkool</title>
+    <meta name="description"
+        content="KAIT research: an offline bilingual (Thai/English) voice-controlled robot arm with LLM ambiguity resolution.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-header {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--text-bright);
+        }
+
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.25rem;
+            margin: 2.5rem 0;
+        }
+
+        .stat-tile {
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            padding: 1.25rem 1rem;
+            text-align: center;
+            background: var(--surface-color);
+        }
+
+        .stat-tile .stat-value {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: var(--text-bright);
+            line-height: 1.1;
+        }
+
+        .stat-tile .stat-label {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            margin-top: 0.4rem;
+        }
+
+        .results-table-wrap {
+            overflow-x: auto;
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            margin: 2rem 0;
+        }
+
+        table.results {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 640px;
+            font-size: 0.92rem;
+        }
+
+        table.results th,
+        table.results td {
+            text-align: left;
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        table.results thead th {
+            color: var(--text-bright);
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        table.results td {
+            color: var(--secondary);
+        }
+
+        table.results td strong {
+            color: var(--text-bright);
+        }
+
+        table.results tr:last-child td {
+            border-bottom: none;
+        }
+
+        .prose {
+            color: var(--secondary);
+            font-size: 1.05rem;
+            line-height: 1.75;
+            max-width: 820px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">S.A.</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#project">Project</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#gallery">Certificates</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dynamic Background -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <main>
+        <section class="section project-header">
+            <div class="container">
+                <a href="index.html#experience" class="back-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5"></path>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Back to Portfolio
+                </a>
+                <h1 class="section-title reveal" style="margin-bottom: 1rem;">Offline Bilingual <span
+                        class="highlight">Voice-Controlled Robot Arm</span></h1>
+                <p class="subtitle" style="color: var(--secondary); max-width: 820px; margin: 0 auto 1rem;">
+                    A robot arm that takes spoken Thai/English commands and uses a local LLM to decide whether to
+                    execute, ask for clarification, or reject each one — grounded by vision, running fully offline.
+                </p>
+                <p class="subtitle"
+                    style="color: var(--primary); font-size: 0.95rem; max-width: 820px; margin: 0 auto 2.5rem;">
+                    KAIT (Kanagawa Institute of Technology), Japan &middot; June–July 2026 &middot; Advisor: Prof.
+                    KAWARAZAKI Noriyuki &middot; Target: IEEE RO-MAN / SII / RA-L
+                </p>
+                <div style="margin-bottom: 1rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://robot-overview.vercel.app" target="_blank" rel="noopener" class="github-link"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-bright); text-decoration: none; padding: 0.5rem 1.2rem; background: rgba(255, 255, 255, 0.1); border-radius: 8px; font-weight: 500;">
+                        Live Research Overview &rarr;
+                    </a>
+                    <a href="https://github.com/sawasdichai123/robot-overview" target="_blank" rel="noopener"
+                        class="github-link"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-bright); text-decoration: none; padding: 0.5rem 1.2rem; background: rgba(255, 255, 255, 0.1); border-radius: 8px; font-weight: 500;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        View Repository
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section pt-0">
+            <div class="container" style="max-width: 900px;">
+                <h2 class="section-title reveal" style="margin-bottom: 1.5rem;">Overview</h2>
+                <p class="prose reveal">
+                    During my research internship at KAIT, I built an offline robot-arm system that takes spoken
+                    commands in Thai or English and decides how to act. Speech is transcribed with faster-whisper, a
+                    local LLM (Qwen2.5 7B on Ollama) classifies each command as <strong
+                        style="color: var(--text-bright);">EXECUTE</strong>, <strong
+                        style="color: var(--text-bright);">ASK</strong> (clarification), or <strong
+                        style="color: var(--text-bright);">REJECT</strong>, and a YOLOv8s + HSV vision pipeline grounds
+                    the decision in the objects actually on the table. The chosen action drives an OpenMANIPULATOR-X arm
+                    over ROS 2 — with no internet connection required.
+                </p>
+
+                <div class="stat-row reveal">
+                    <div class="stat-tile">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">Decision accuracy, local (30/30 trials)</div>
+                    </div>
+                    <div class="stat-tile">
+                        <div class="stat-value">3</div>
+                        <div class="stat-label">Decisions: Execute / Ask / Reject</div>
+                    </div>
+                    <div class="stat-tile">
+                        <div class="stat-value">2</div>
+                        <div class="stat-label">Languages (Thai &amp; English)</div>
+                    </div>
+                    <div class="stat-tile">
+                        <div class="stat-value">7B</div>
+                        <div class="stat-label">Local model, fully offline</div>
+                    </div>
+                </div>
+
+                <h2 class="section-title reveal" style="margin-bottom: 1.5rem;">System &amp; <span
+                        class="highlight">Tools</span></h2>
+                <div class="skill-list reveal" style="margin-bottom: 3rem;">
+                    <span class="skill-tag">Qwen2.5 7B (Ollama)</span>
+                    <span class="skill-tag">YOLOv8s + HSV</span>
+                    <span class="skill-tag">faster-whisper (STT)</span>
+                    <span class="skill-tag">gTTS (TTS)</span>
+                    <span class="skill-tag">ROS 2 Humble</span>
+                    <span class="skill-tag">OpenMANIPULATOR-X</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Mac M3 (Metal GPU)</span>
+                    <span class="skill-tag">Ubuntu 22.04 ARM64</span>
+                </div>
+
+                <h2 class="section-title reveal" style="margin-bottom: 1.5rem;">Key <span
+                        class="highlight">Findings</span></h2>
+                <ul class="feature-list reveal" style="font-size: 1rem; line-height: 1.7;">
+                    <li><strong>Clarification is necessary (H1).</strong> Removing the clarification step drops decision
+                        accuracy to 63.3%, and on ambiguous commands the system's "first-match" guess is systematically
+                        biased toward whichever object vision detects most confidently (18.2% vs 78.6% task success
+                        depending on scene layout) — not a random error.</li>
+                    <li><strong>A local ≤7B model matches cloud-tier accuracy (H2).</strong> The local Qwen2.5 7B and a
+                        cloud model (Claude Sonnet 5) both reach 100% on the same 30 cases; the local system trades
+                        ~7&nbsp;s of latency for fully offline operation and zero per-token cost.</li>
+                    <li><strong>Vision grounding is necessary (H3).</strong> Without the vision object list, accuracy
+                        falls to 80% and every error is an "over-ask" — e.g. an empty table can't be judged from speech
+                        alone. Confirmed by a full re-run under a revised prompt.</li>
+                    <li><strong>~7B is the capability threshold.</strong> Across the Qwen2.5 size ladder (0.5B → 7B),
+                        every sub-7B model collapses to EXECUTE 0% (it over-asks even fully-specified commands); all
+                        three decision states only arrive reliably at 7B — a threshold, not smooth scaling.</li>
+                </ul>
+
+                <h2 class="section-title reveal" style="margin: 3rem 0 1.5rem;">Experiment <span
+                        class="highlight">Results</span></h2>
+                <div class="results-table-wrap reveal">
+                    <table class="results">
+                        <thead>
+                            <tr>
+                                <th>Condition</th>
+                                <th>Decision accuracy</th>
+                                <th>What it shows</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>C1 — Local + clarification</strong><br>(qwen2.5:7b, proposed system)</td>
+                                <td><strong>100%</strong> (30/30)</td>
+                                <td>Proposed system; re-validated 3×. ~11.8&nbsp;s avg, later tuned to 9.4&nbsp;s.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>C2 — No-clarification baseline</strong></td>
+                                <td>63.3%</td>
+                                <td>Ambiguous task success ≈46.4% (bias-controlled) → clarification is needed (H1).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>C3 — Cloud reference</strong><br>(Claude Sonnet 5)</td>
+                                <td><strong>100%</strong> (30/30)</td>
+                                <td>Same prompt/cases as C1 → local matches cloud, faster per-call but online-only (H2).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>C4 — No-vision ablation</strong></td>
+                                <td>80%</td>
+                                <td>All errors are over-asks → vision grounding is needed (H3).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="prose reveal" style="font-size: 0.9rem;">
+                    Full per-trial logs, the ≤7B cross-vendor benchmark, and the complete methodology are on the
+                    <a href="https://robot-overview.vercel.app" target="_blank" rel="noopener"
+                        style="color: var(--primary);">live research overview</a>.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Sawasdichai Amornpradubkool</p>
+    </footer>
+
+    <!-- Lightbox Modal (kept for shared script.js) -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content-wrapper">
+            <img class="lightbox-img" id="lightbox-img" src="" alt="Full Screen">
+            <h3 id="lightbox-caption"></h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
