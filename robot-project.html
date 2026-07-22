@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robot Arm Research | Sawasdichai Amornpradubkool</title>
     <meta name="description"
-        content="KAIT research: an offline bilingual (Thai/English) voice-controlled robot arm with LLM ambiguity resolution.">
+        content="KAIT research: an offline bilingual (Thai/English) voice-controlled robot arm with LLM ambiguity resolution, demonstrated in simulation and on a self-built physical arm.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -182,7 +182,9 @@
                         style="color: var(--text-bright);">ASK</strong> (clarification), or <strong
                         style="color: var(--text-bright);">REJECT</strong>, and a YOLOv8s + HSV vision pipeline grounds
                     the decision in the objects actually on the table. The chosen action drives an OpenMANIPULATOR-X arm
-                    over ROS 2 — with no internet connection required.
+                    in RViz2 simulation over ROS 2 — with no internet connection required. The same decision pipeline
+                    was later wired up to a self-built physical 5-DOF arm (ESP32 + PCA9685, custom inverse
+                    kinematics), which picked up real bottles from spoken commands end-to-end.
                 </p>
 
                 <div class="stat-row reveal">
@@ -212,7 +214,10 @@
                     <span class="skill-tag">faster-whisper (STT)</span>
                     <span class="skill-tag">gTTS (TTS)</span>
                     <span class="skill-tag">ROS 2 Humble</span>
-                    <span class="skill-tag">OpenMANIPULATOR-X</span>
+                    <span class="skill-tag">OpenMANIPULATOR-X (sim)</span>
+                    <span class="skill-tag">ESP32 + PCA9685 (real arm)</span>
+                    <span class="skill-tag">Intel RealSense</span>
+                    <span class="skill-tag">Custom IK (Python)</span>
                     <span class="skill-tag">Python</span>
                     <span class="skill-tag">Mac M3 (Metal GPU)</span>
                     <span class="skill-tag">Ubuntu 22.04 ARM64</span>
@@ -223,17 +228,20 @@
                 <ul class="feature-list reveal" style="font-size: 1rem; line-height: 1.7;">
                     <li><strong>Clarification is necessary (H1).</strong> Removing the clarification step drops decision
                         accuracy to 63.3%, and on ambiguous commands the system's "first-match" guess is systematically
-                        biased toward whichever object vision detects most confidently (18.2% vs 78.6% task success
-                        depending on scene layout) — not a random error.</li>
+                        biased toward whichever object vision detects most confidently (14.3% vs 78.6% task success
+                        depending on scene layout, averaging 46.4%) — not a random error.</li>
                     <li><strong>A local ≤7B model matches cloud-tier accuracy (H2).</strong> The local Qwen2.5 7B and a
                         cloud model (Claude Sonnet 5) both reach 100% on the same 30 cases; the local system trades
                         ~7&nbsp;s of latency for fully offline operation and zero per-token cost.</li>
-                    <li><strong>Vision grounding is necessary (H3).</strong> Without the vision object list, accuracy
-                        falls to 80% and every error is an "over-ask" — e.g. an empty table can't be judged from speech
-                        alone. Confirmed by a full re-run under a revised prompt.</li>
                     <li><strong>~7B is the capability threshold.</strong> Across the Qwen2.5 size ladder (0.5B → 7B),
                         every sub-7B model collapses to EXECUTE 0% (it over-asks even fully-specified commands); all
                         three decision states only arrive reliably at 7B — a threshold, not smooth scaling.</li>
+                    <li><strong>Beyond simulation — a real robot picks things up.</strong> I hand-built a 5-DOF arm
+                        (ESP32 + PCA9685, DS3218 servos, custom geometric IK) and wired the same voice → LLM → vision
+                        decision pipeline into it over serial. With an Intel RealSense for metric depth, it completed
+                        full voice-commanded pick-and-place — standby → pick → place → standby — repeatably. This is a
+                        qualitative hardware demonstration alongside the RViz2-simulated results above, not a
+                        replacement for them.</li>
                 </ul>
 
                 <h2 class="section-title reveal" style="margin: 3rem 0 1.5rem;">Experiment <span
@@ -263,11 +271,6 @@
                                 <td><strong>100%</strong> (30/30)</td>
                                 <td>Same prompt/cases as C1 → local matches cloud, faster per-call but online-only (H2).
                                 </td>
-                            </tr>
-                            <tr>
-                                <td><strong>C4 — No-vision ablation</strong></td>
-                                <td>80%</td>
-                                <td>All errors are over-asks → vision grounding is needed (H3).</td>
                             </tr>
                         </tbody>
                     </table>
