@@ -560,7 +560,12 @@
                     </div>
 
                     <div class="card reveal delay-2"
-                        onclick="openLightbox('assets/activities/kait-technical-internship/BU-News-Cover.jpg', 'KAIT Technical Internship Program — Featured on Bangkok University News')">
+                        onclick="openGallery([
+                            {src: 'assets/activities/kait-technical-internship/BU-News-Cover.jpg', caption: 'KAIT Technical Internship Program — Featured on Bangkok University News'},
+                            {src: 'assets/activities/kait-technical-internship/Certificate-Handover.png', caption: 'Receiving the Certificate of Technical Practice from Prof. KAWARAZAKI Noriyuki'},
+                            {src: 'assets/activities/kait-technical-internship/Selection-Interview-Panel.jpg', caption: 'KAIT Technical Internship Program — Selection Interview, Bangkok University'},
+                            {src: 'assets/activities/kait-technical-internship/Portfolio-Presentation.jpg', caption: 'KAIT Technical Internship Program — Presentation During the Selection Process'}
+                        ], 0)">
                         <div class="card-image-wrapper">
                             <img loading="lazy" src="assets/activities/kait-technical-internship/BU-News-Cover.jpg"
                                 alt="Receiving the KAIT Technical Internship Program folder at Kanagawa Institute of Technology, Japan">
@@ -583,33 +588,6 @@
                             <a href="https://www.bu.ac.th/th/featured-stories/2593" target="_blank" rel="noopener"
                                 onclick="event.stopPropagation()" class="research-link">Read the full story on BU
                                 News &rarr;</a>
-
-                            <div class="grid activity-grid" style="margin-top: 1.25rem;">
-                                <div class="card reveal delay-1"
-                                    onclick="event.stopPropagation(); openLightbox('assets/activities/kait-technical-internship/Certificate-Handover.png', 'Receiving the Certificate of Technical Practice from Prof. KAWARAZAKI Noriyuki')">
-                                    <div class="card-image-wrapper">
-                                        <img loading="lazy"
-                                            src="assets/activities/kait-technical-internship/Certificate-Handover.png"
-                                            alt="Receiving the Certificate of Technical Practice from Prof. KAWARAZAKI Noriyuki">
-                                    </div>
-                                </div>
-                                <div class="card reveal delay-2"
-                                    onclick="event.stopPropagation(); openLightbox('assets/activities/kait-technical-internship/Selection-Interview-Panel.jpg', 'KAIT Technical Internship Program — Selection Interview, Bangkok University')">
-                                    <div class="card-image-wrapper">
-                                        <img loading="lazy"
-                                            src="assets/activities/kait-technical-internship/Selection-Interview-Panel.jpg"
-                                            alt="Selection interview panel for the KAIT Technical Internship Program">
-                                    </div>
-                                </div>
-                                <div class="card reveal delay-3"
-                                    onclick="event.stopPropagation(); openLightbox('assets/activities/kait-technical-internship/Portfolio-Presentation.jpg', 'KAIT Technical Internship Program — Presentation During the Selection Process')">
-                                    <div class="card-image-wrapper">
-                                        <img loading="lazy"
-                                            src="assets/activities/kait-technical-internship/Portfolio-Presentation.jpg"
-                                            alt="Presentation session during the KAIT Technical Internship Program selection process">
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -972,9 +950,12 @@
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
         <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <span class="lightbox-nav-btn prev-btn" onclick="event.stopPropagation(); showPrevImage()" aria-label="Previous image">&#8249;</span>
+        <span class="lightbox-nav-btn next-btn" onclick="event.stopPropagation(); showNextImage()" aria-label="Next image">&#8250;</span>
         <div class="lightbox-content-wrapper">
             <img class="lightbox-img" id="lightbox-img" src="" alt="Full Screen Certificate">
             <h3 id="lightbox-caption"></h3>
+            <span id="lightbox-counter" class="lightbox-counter"></span>
         </div>
     </div>
 

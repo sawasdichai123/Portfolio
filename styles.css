@@ -870,6 +870,48 @@ h3 {
     color: var(--primary);
 }
 
+.lightbox-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 1001;
+    user-select: none;
+    display: none;
+}
+
+.lightbox.has-gallery .lightbox-nav-btn {
+    display: block;
+}
+
+.lightbox-nav-btn:hover {
+    color: var(--primary);
+}
+
+.prev-btn {
+    left: 2rem;
+}
+
+.next-btn {
+    right: 2rem;
+}
+
+.lightbox-counter {
+    display: none;
+    margin-top: 0.5rem;
+    color: var(--secondary);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.lightbox.has-gallery .lightbox-counter {
+    display: block;
+}
+
 /* Footer */
 .footer {
     text-align: center;
