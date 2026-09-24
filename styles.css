@@ -828,7 +828,8 @@ h3 {
 .lightbox-content-wrapper {
     position: relative;
     max-width: 90%;
-    max-height: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -910,6 +911,28 @@ h3 {
 
 .lightbox.has-gallery .lightbox-counter {
     display: block;
+}
+
+.lightbox-details {
+    display: none;
+    max-width: 640px;
+    margin: 0.75rem auto 0;
+    color: var(--secondary);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.lightbox.has-details .lightbox-details {
+    display: block;
+}
+
+.lightbox-details p {
+    margin-bottom: 0.75rem;
+}
+
+.lightbox-details p:last-of-type {
+    margin-bottom: 0;
 }
 
 /* Footer */

@@ -45,6 +45,7 @@ const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxCaption = document.getElementById('lightbox-caption');
 const lightboxCounter = document.getElementById('lightbox-counter');
+const lightboxDetails = document.getElementById('lightbox-details');
 
 // Gallery state (only used when the lightbox is opened with multiple images)
 let currentGalleryImages = [];
@@ -56,6 +57,8 @@ function openLightbox(imageSrc, captionText) {
     currentGalleryImages = [];
     currentGalleryIndex = 0;
     lightbox.classList.remove('has-gallery');
+    lightboxDetails.innerHTML = '';
+    lightbox.classList.remove('has-details');
 
     lightboxImg.src = imageSrc;
     lightboxCaption.textContent = captionText;
@@ -63,12 +66,20 @@ function openLightbox(imageSrc, captionText) {
     document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
 }
 
-function openGallery(images, startIndex) {
+function openGallery(images, startIndex, detailsHtml) {
     currentGalleryImages = images;
     currentGalleryIndex = startIndex || 0;
 
     lightbox.classList.toggle('has-gallery', currentGalleryImages.length > 1);
     renderGalleryImage();
+
+    if (detailsHtml) {
+        lightboxDetails.innerHTML = detailsHtml;
+        lightbox.classList.add('has-details');
+    } else {
+        lightboxDetails.innerHTML = '';
+        lightbox.classList.remove('has-details');
+    }
 
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
@@ -96,11 +107,13 @@ function showNextImage() {
 function closeLightbox() {
     lightbox.classList.remove('active');
     lightbox.classList.remove('has-gallery');
+    lightbox.classList.remove('has-details');
     document.body.style.overflow = 'auto'; // Re-enable scrolling
     setTimeout(() => {
         lightboxImg.src = '';
         lightboxCaption.textContent = '';
         lightboxCounter.textContent = '';
+        lightboxDetails.innerHTML = '';
         currentGalleryImages = [];
         currentGalleryIndex = 0;
     }, 300); // Wait for transition before clearing
